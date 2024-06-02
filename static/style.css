@@ -1,0 +1,59 @@
+body {
+    background-image: url('1k.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+}
+.container {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+header, footer {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#translation-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}

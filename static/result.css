@@ -1,0 +1,20 @@
+body {
+    background-image: url('https://www.example.com/your-background-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+}
+.container {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+header, footer {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}

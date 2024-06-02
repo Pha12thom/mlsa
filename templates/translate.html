@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Translator</h1>
+<form id="translate-form">
+    <label for="text">Text to translate:</label>
+    <input type="text" id="text" name="text" required>
+    <label for="to_language">Translate to (language code):</label>
+    <input type="text" id="to_language" name="to_language" required>
+    <button type="submit">Translate</button>
+</form>
+<div id="translation-result"></div>
+
+<script>
+    document.getElementById('translate-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const text = document.getElementById('text').value;
+        const toLanguage = document.getElementById('to_language').value;
+
+        fetch('/translate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'text': text,
+                'to_language': toLanguage
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('translation-result').innerText = data.translation;
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+{% endblock %}
